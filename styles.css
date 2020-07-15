@@ -29,23 +29,24 @@ nav{
     color: #7FFFD4 !important;
 }
 
-
 body{
     font-family: 'Montserrat', sans-serif !important;
 }
 
 .container-fluid{
-    padding:2%;
+    padding: 0.5%;
 }
 
 .container-fluid.con-2{
     padding:2%;
 }
-.feature-box{
-    padding:0% 35%;
+.container-fluid.feature-box{
+    /* padding:0% 35% !important; */
     background-color: #f5f5f5;
-    
 }
+.container-fluid
+
+
 
 .my-pic{
     height:6rem;
@@ -68,6 +69,9 @@ body{
 
 .fa{
     font-size:2.5rem !important;
+}
+.row{
+    margin: 0 !important;
 }
 .row.icons{
     margin:12px 0px;

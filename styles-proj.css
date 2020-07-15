@@ -16,15 +16,9 @@ nav, .navbar-brand{
     color: white !important;
 }
 
-nav{
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-}
-
 .nav-link{
     color: white !important;
-    font-size: 1.25rem;
-
+    font-size: 1.25rem; 
 }
 .nav-link:hover, .active-page{
     color: #7FFFD4 !important;
@@ -34,27 +28,37 @@ body{
     font-family: 'Montserrat', sans-serif !important;
 }
 
+.row{
+    margin: 0 !important;
+}
+
 .container-fluid{
-    padding: 3% 2.5% !important;
+    padding: 0.5% !important;
+    
 }
 
 .container-fluid.con-2{
     padding: 0% 2.5% 3% 2.5% !important;
 }
 
+
 .all-card{
     text-align:center;
 }
 
 .feature-box{
-    padding:0% 35% !important;
     background-color: #f5f5f5;
-    
 }
 
 .fa{
     font-size:2.5rem !important;
 }
+
+/* .row, body{
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+} */
+
 .row.icons{
     margin:12px 0px;
 }
