@@ -4,15 +4,11 @@ h4{
 }
 
 .bg-custom{
-    /* background-color: #F4EFEA; */
     background-color: #007bff;
 }
 
 .navbar-brand{
-
-    /* color: #FF1E27 !important; */
     color: white !important;
-    
 }
 
 nav{
@@ -36,17 +32,19 @@ body{
 .container-fluid{
     padding: 0.5%;
 }
-
+.container-fluid.con-1{
+    padding-top: 4%;
+}
 .container-fluid.con-2{
     padding:2%;
+}
+.container-fluid.con-3{
+    padding-bottom:4%;
 }
 .container-fluid.feature-box{
     /* padding:0% 35% !important; */
     background-color: #f5f5f5;
 }
-.container-fluid
-
-
 
 .my-pic{
     height:6rem;
@@ -77,6 +75,10 @@ body{
     margin:12px 0px;
 }
 
+.feature-box{
+    padding: 0% 10%;
+    background-color: #f5f5f5;
+}
 #copy{
     margin:12px 0px;
     text-align: center;

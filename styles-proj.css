@@ -5,20 +5,23 @@ h5,h1{
 nav, .navbar-brand{
     font-weight: 600 !important;
 }
+
+nav{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
 .bg-custom{
     /* background-color: #F4EFEA; */
     background-color: #007bff;
 }
 
 .navbar-brand{
-
-    /* color: #FF1E27 !important; */
     color: white !important;
 }
 
 .nav-link{
     color: white !important;
-    font-size: 1.25rem; 
+    font-size: 1.25rem !important; 
 }
 .nav-link:hover, .active-page{
     color: #7FFFD4 !important;
@@ -41,24 +44,18 @@ body{
     padding: 0% 2.5% 3% 2.5% !important;
 }
 
-
 .all-card{
     text-align:center;
 }
 
 .feature-box{
+    padding: 0% 10%;
     background-color: #f5f5f5;
 }
 
 .fa{
     font-size:2.5rem !important;
 }
-
-/* .row, body{
-    padding-right: 0px !important;
-    margin-right: 0px !important;
-} */
-
 .row.icons{
     margin:12px 0px;
 }
@@ -78,7 +75,7 @@ body{
     text-align: center;
     color: gray; 
     padding-bottom:12px;
-     margin-bottom:0px;
+    margin-bottom:0px;
 }
 
 .disable{
@@ -101,5 +98,6 @@ a{
 #contact{
     font-weight:500 !important;
     text-align: center;
+    padding-top:8px;
 }
 
