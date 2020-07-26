@@ -108,6 +108,12 @@ body {
     border-radius: 3px;
 }
 
+@media (max-width:640px) {
+  .top{
+    background-attachment:initial;
+  }
+}
+
 
 /**********************************************
 *** BOTTOM PART
