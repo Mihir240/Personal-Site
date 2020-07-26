@@ -36,7 +36,6 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(night.webp);
     background-size: cover;
     background-position: 50% 25%;
-    background-attachment:fixed; 
     position: relative;
 }
 
