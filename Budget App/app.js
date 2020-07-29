@@ -12,7 +12,8 @@ var budgetController = (function () {
 
     if (totalIncome > 0 && this.value < totalIncome) {
       this.percentage = Math.round((this.value / totalIncome) * 100);
-    } else {
+    } 
+    else {
       this.percentage = -1;
     }
   };
@@ -31,7 +32,8 @@ var budgetController = (function () {
   Income.prototype.calcIncPercent = function (totalIncome) {
     if (totalIncome > 0) {
       this.percentage = Math.round((this.value / totalIncome) * 100);
-    } else {
+    } 
+    else {
       this.percentage = -1;
     }
   };
@@ -74,7 +76,8 @@ var budgetController = (function () {
               Expense and Income function constructors */
       if (data.allItems[type].length > 0) {
         ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
-      } else {
+      } 
+      else {
         ID = 0;
       }
       /*The type will either be the inc or exp array and the next bracket beside the first brackets will 
@@ -151,7 +154,8 @@ var budgetController = (function () {
       //calculate the percentage of income that we spent
       if (data.totals.inc > 0 && data.totals.exp < data.totals.inc) {
         data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
-      } else {
+      } 
+      else {
         data.percentage = -1;
       }
     },
@@ -236,7 +240,8 @@ var UIController = (function () {
                 <div class="right clearfix"><div class="item__value">%value%</div> <div class="item__percentInc">21%</div>
                 <div class="item__delete"><button class="item__delete--btn">
                 <i class="ion-ios-close-outline"></i></button></div></div></div>`;
-      } else if (type === "exp") {
+      } 
+      else if (type === "exp") {
         element = domStrings.expensesContainer;
         html = `<div class="item clearfix" id="exp-%id%">
                 <div class="item__description">%description%</div><div class="right clearfix"> <div class="item__value">%value%</div>
@@ -259,22 +264,14 @@ var UIController = (function () {
 
       obj.budget > 0 ? (type = "inc") : (type = "exp");
 
-      document.querySelector(domStrings.budgetLabel).textContent = formatNumber(
-        obj.budget,
-        type
-      );
-      document.querySelector(domStrings.incomeLabel).textContent = formatNumber(
-        obj.totalInc,
-        "inc"
-      );
-      document.querySelector(
-        domStrings.expenseLabel
-      ).textContent = formatNumber(obj.totalExp, "exp");
+      document.querySelector(domStrings.budgetLabel).textContent = formatNumber(obj.budget, type);
+      document.querySelector(domStrings.incomeLabel).textContent = formatNumber(obj.totalInc,"inc");
+      document.querySelector(domStrings.expenseLabel).textContent = formatNumber(obj.totalExp, "exp");
 
       if (obj.percentage > 0) {
-        document.querySelector(domStrings.percentLabel).textContent =
-          obj.percentage + "%";
-      } else {
+        document.querySelector(domStrings.percentLabel).textContent = obj.percentage + "%";
+      } 
+      else {
         document.querySelector(domStrings.percentLabel).textContent = "N/A";
       }
     },
@@ -282,9 +279,7 @@ var UIController = (function () {
     displayPercentages: function (arrPerc, type) {
       var theDom;
 
-      type === "exp"
-        ? (theDom = domStrings.expPercent)
-        : (theDom = domStrings.incPercent);
+      type === "exp"? (theDom = domStrings.expPercent):(theDom = domStrings.incPercent);
 
       //This will return a nodelist
       var fields = document.querySelectorAll(theDom);
@@ -292,24 +287,20 @@ var UIController = (function () {
       fields.forEach(function (current, index) {
         if (arrPerc[index] > 0) {
           current.textContent = arrPerc[index] + "%";
-        } else {
+        } 
+        else {
           current.textContent = "N/A";
         }
       });
     },
 
     displayMonth: function () {
-      var date = new Intl.DateTimeFormat("en", {
-        year: "numeric",
-        month: "long",
-      }).format();
+      var date = new Intl.DateTimeFormat("en", {year: "numeric", month: "long"}).format();
 
       //document.querySelector(domStrings.dateLabel).textContent = date;
 
       //getElementsByClassName returns a nodelist, so we need to select the respective element
-      document.getElementsByClassName(
-        "budget-title-month"
-      )[0].textContent = date;
+      document.getElementsByClassName("budget-title-month")[0].textContent = date;
     },
 
     deleteListItem: function (theSelectorId) {
@@ -323,9 +314,7 @@ var UIController = (function () {
       var fields;
       //The querySelctorAll will be separated by the comma
       //The querySelectorAll returns a list
-      fields = document.querySelectorAll(
-        domStrings.inputValue + ", " + domStrings.inputDescription
-      );
+      fields = document.querySelectorAll(domStrings.inputValue + ", " + domStrings.inputDescription);
 
       //callback function within the forEach
       fields.forEach(function (current, index, array) {
@@ -337,13 +326,7 @@ var UIController = (function () {
 
     Ctype: function () {
       // querySelectorAll returns a NodeList
-      var fields = document.querySelectorAll(
-        domStrings.inputType +
-          "," +
-          domStrings.inputDescription +
-          "," +
-          domStrings.inputValue
-      );
+      var fields = document.querySelectorAll(domStrings.inputType + "," + domStrings.inputDescription + "," + domStrings.inputValue);
 
       fields.forEach(function (current, index, array) {
         current.classList.toggle("red-focus");
