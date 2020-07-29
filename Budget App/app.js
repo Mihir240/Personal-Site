@@ -380,13 +380,9 @@ var appController = (function (budgetCtrl, UICtrl) {
     });
 
     // Using Event Delegation to delete item from eithr expenses or income
-    document
-      .querySelector(DOM.container)
-      .addEventListener("click", ctrlDeleteItem);
+    document.querySelector(DOM.container).addEventListener("click", ctrlDeleteItem);
 
-    document
-      .querySelector(DOM.inputType)
-      .addEventListener("change", UICtrl.Ctype);
+    document.querySelector(DOM.inputType).addEventListener("change", UICtrl.Ctype);
   };
 
   function ctrlAddItem() {
